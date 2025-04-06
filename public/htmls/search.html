@@ -10,9 +10,24 @@
 	<header-component></header-component>
 	<div style="text-align: center; vertical-align: middle;">
 		<form name="search" action="/api/food" method="get">
-			<input type="search" name="searchString"
-				placeholder="Enter keywords to search food product" size="100" /><br />
-		</form>
+			<label for="searchString">Search Description:</label><br>
+			<input type="text" name="searchString" placeholder="e.g. granola bar" size="60" /><br><br>
+		  
+			<label for="brandOwner">Brand Owner:</label><br>
+			<input type="text" name="brandOwner" placeholder="e.g. Kellogg" size="60" /><br><br>
+		  
+			<label for="category">Food Category:</label><br>
+			<input type="text" name="category" placeholder="e.g. Cereal" size="60" /><br><br>
+		  
+			<label for="includeIngredients">Ingredients (Include):</label><br>
+			<input type="text" name="includeIngredients" placeholder="e.g. oats, honey" size="60" /><br><br>
+		  
+			<label for="excludeIngredients">Ingredients (Exclude):</label><br>
+			<input type="text" name="excludeIngredients" placeholder="e.g. sugar, corn syrup" size="60" /><br><br>
+		  
+			<button type="submit">Search</button>
+			<button type="reset">Clear Filters</button>
+		  </form>		  
 	</div>
 </body>
 </html>

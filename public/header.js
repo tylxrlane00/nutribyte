@@ -6,15 +6,15 @@ headerTemplate.innerHTML = `
 			<tbody>
 				<tr>
 					<td>
-						<div>
-							<a><img src="/images/logo.svg"
-								alt="Logo - NutriByte" width="100" /></a>
+						<div style="display: flex; align-items: center; gap: 1.5rem;">
+						<a href="/"><img src="/images/logo.svg" alt="Logo - NutriByte" width="100" /></a>
+						<nav class="nav-buttons">
+							<button onclick="window.location.href='/'">Home</button>
+							<button onclick="window.location.href='/htmls/search.html'">Search</button>
+							<button onclick="window.location.href='/htmls/compare.html'">Compare</button>
+						</nav>
 						</div>
 					</td>
-					<td align="left" valign="bottom"><a href="index.html">home</a></td>
-                    <td align="left" valign="bottom"><a href="/htmls/search.html">search</a></td>
-                    <td align="left" valign="bottom"><a href="index.html">compare</a></td>
-                    <td align="left" valign="bottom"><a href="index.html">login</a></td>
 				</tr>
 			</tbody>
 		</table>
