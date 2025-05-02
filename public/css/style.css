@@ -163,6 +163,13 @@ body {
   .card li:last-child {
     border-bottom: none;
   }
+
+  .card-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
   
   /* Styled back link */
   .back-link {

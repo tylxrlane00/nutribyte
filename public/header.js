@@ -12,6 +12,7 @@ headerTemplate.innerHTML = `
 							<button onclick="window.location.href='/'">Home</button>
 							<button onclick="window.location.href='/htmls/search.html'">Search</button>
 							<button onclick="window.location.href='/htmls/compare.html'">Compare</button>
+							<button onclick="window.location.href='/htmls/diet.html'">My Diet</button>
 						</nav>
 						</div>
 					</td>

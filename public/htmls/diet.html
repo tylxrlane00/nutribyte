@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Tracked Diet - NutriByte</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../header.js" defer></script>
+</head>
+
+<body>
+    <header-component></header-component>
+
+    <div class="container">
+        <h2>My Tracked Diet</h2>
+        <div id="dietList" class="card">
+            <p><em>Loading tracked foods...</em></p>
+        </div>
+        <button onclick="clearDiet()">Clear Tracked Diet</button>
+    </div>
+
+    <script>
+        function renderDietLog() {
+            const container = document.getElementById("dietList");
+            const data = JSON.parse(localStorage.getItem("dietLog") || "[]");
+
+            if (data.length === 0) {
+                container.innerHTML = "<p><em>No foods tracked yet.</em></p>";
+                return;
+            }
+
+            let html = "<ul>";
+            data.forEach(item => {
+                html += "<li><strong>" + item.description + "</strong><br>" +
+                    "Brand: " + item.brand + "<br>" +
+                    "Serving: " + item.serving + "</li>";
+            });
+            html += "</ul>";
+            container.innerHTML = html;
+        }
+
+        function clearDiet() {
+            if (confirm("Clear all tracked foods?")) {
+                localStorage.removeItem("dietLog");
+                renderDietLog();
+            }
+        }
+
+        window.onload = renderDietLog;
+    </script>
+</body>
+
+</html>
